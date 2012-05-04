@@ -10,6 +10,6 @@
 <% end %>
 | 
 <% end %>
-<%= link_to t('header_links.selected_items'), folder_index_path %> (<span id="folder_number"><%= "#{session[:folder_document_ids] ? session[:folder_document_ids].length : 0}" %></span>)
+<%= link_to t('header_links.selected_items'), folder_index_path %> (<span id="folder_number"><%= count_of_items_in_folder %></span>)
 |
 <%= link_to t('header_links.search_history'), search_history_path %>

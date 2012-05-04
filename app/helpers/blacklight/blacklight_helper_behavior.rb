@@ -347,9 +347,13 @@ module Blacklight::BlacklightHelperBehavior
     return result
   end
   
+  def count_of_items_in_folder
+    Bookmark.where(:session_id => request.session_options[:id]).count
+  end
+
   # determines if the given document id is in the folder
   def item_in_folder?(doc_id)
-    session[:folder_document_ids] && session[:folder_document_ids].include?(doc_id) ? true : false
+    Bookmark.where(:session_id => request.session_options[:id], :document_id => doc_id).exists?
   end
   
   # puts together a collection of documents into one refworks export string

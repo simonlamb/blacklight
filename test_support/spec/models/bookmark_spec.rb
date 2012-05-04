@@ -22,7 +22,7 @@ describe Bookmark do
     @bookmark.should be_valid
   end
    
-  it "should require user_id" do
+  it "should require user_id or session_id" do
     @bookmark.should have(1).error_on(:user_id)
   end
 
