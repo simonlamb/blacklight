@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
-describe "controllers that are not catalog controller" do
+describe "search controllers that are not catalog controller" do
 
   it "should have the correct search form" do
     visit alternate_index_path

@@ -120,13 +120,15 @@ check_errs $? "Rake Migration failed"
 rails g cucumber:install &> /dev/null 
 
 cp ../../test_support/alternate_controller.rb app/controllers/
+cp ../../test_support/header_search_controller.rb app/controllers/
 # add routing for the alternate_controller:
 # resources :alternate do
 #   member do
 #     get :facet
 #   end
 # end
-ruby -pi.bak -e 'gsub(/devise_for :users/, "devise_for :users\n  resources :alternate do\n    member do\n      get :facet\n    end\n  end")' config/routes.rb
+# match "/header_search" => "header_search#sample", :as=>"header_search"
+ruby -pi.bak -e 'gsub(/devise_for :users/, "devise_for :users\n  resources :alternate do\n    member do\n      get :facet\n    end\n  end\n  match \"/header_search\" => \"header_search\#sample\", :as=>\"header_search\"")' config/routes.rb
 
 jetty_zip=$( echo $JETTY_URL | awk '{split($0,a,"/"); print "/tmp/blacklight_jetty_"a[length(a)]}')
 if [ ! -f $jetty_zip ]
