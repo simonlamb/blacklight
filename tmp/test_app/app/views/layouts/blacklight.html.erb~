@@ -44,8 +44,7 @@
           <%= link_to application_name, root_path, :class => 'brand' %>
           <div id="logo" class="brand-logo pull-right hidden-phone"></div>
           <div class="nav-collapse">
-            <ul class="nav">
-              <li><a href="search.html">Home</a></li>
+            <ul class="nav">              
               <%= render :partial=>'/user_util_links' %>
             </ul>
           </div><!--/.nav-collapse -->
@@ -102,33 +101,36 @@
 
 <!-- /container -->
 <div id="background-container" style="background-color: #fff; background-image: none;">
-
-<div class="visible-desktop" id="top-spacer">
-  &nbsp;
-</div>
-
+  <div class="visible-desktop" id="top-spacer">
+    &nbsp;
+  </div>
   <div id="main-container" class="container">
     <div class="inner-container">
+    <!-- Top bar -->
+     <%= topbar_items.join('').html_safe %>
+    <!-- /Top bar -->
 
 
-<!-- sidebar -->
-
-<div class="container">
-      <div class="row-fluid">
-        <div class="span3 hidden-phone">
-          <div class="sidebar-nav well " id="sidebar-nav">
-            <!-- <div id="sidebar-title">
-              <h4>Refine Search</h4>
-            </div>
-            -->
-            <%= sidebar_items.join('').html_safe %>
-           
-          </div><!--/.well -->
-        </div><!--/span-->
-       <div class="span9">
-           <%= render :partial=>'/flash_msg' %>
-           <%= yield %>	
-       </div>
+    <!-- sidebar -->
+     <div class="container">
+        <div class="row-fluid">
+          <div class="span3 hidden-phone">
+            <div class="sidebar-nav well " id="sidebar-nav">
+              <!-- <div id="sidebar-title">
+                <h4>Refine Search</h4>
+              </div>
+              -->
+              <%= sidebar_items.join('').html_safe %>
+             
+            </div><!--/.well -->
+          </div><!--/span-->
+         <div class="span9">
+             <%= render :partial=>'/flash_msg' %>
+             <%= yield %>	
+         </div>
+      </div>
+    </div>
+  </div>
 </div>
 
  <footer>

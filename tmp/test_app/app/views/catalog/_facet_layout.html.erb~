@@ -1,0 +1,4 @@
+<div class="facet_limit blacklight-<%= facet_field.field.parameterize %>">
+  <li class="nav-header"><%= facet_field.label -%></li>
+  <%= yield %>
+</div> 
