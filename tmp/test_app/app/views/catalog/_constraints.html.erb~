@@ -3,6 +3,7 @@
     <div class="span3">
 	    <h4><%= t('blacklight.search.filters.title') %></h4>
     </div>
-  <%= render_constraints(localized_params) %>  
-		
+    <div class="span9">
+      <%= render_constraints(localized_params) %>  
+		</div>
 </div>

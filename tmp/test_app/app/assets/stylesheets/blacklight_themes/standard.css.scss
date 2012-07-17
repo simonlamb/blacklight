@@ -1,14 +1,73 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
 
+@import 'blacklight/blacklight_defaults';
+@import "blacklight/facets";
 
 $logo_image: 'blacklight/logo.png' !default;
+
+
+//bootstrap var
+$navbarHeight: 50px; 
+
+
+
+#facets
+{
+	font-size:100%;
+	padding:1em 0 0 1em;
+
+
+  h2
+  {
+    font-size:14px!important;
+    color:#555;
+  }
+
+  h3
+  {
+    padding: 3px 15px;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #999999;
+    cursor:pointer;
+    font-weight:400;
+    margin-bottom:0;
+    text-align:justify;
+  }
+
+    li
+    {
+      padding-left:1.2em;
+      list-style:none;
+      margin:.3em 0;
+
+    a.remove
+    {
+      color:#666;
+    }
+
+    a:hover
+    {
+      background-color:#eee;
+    }
+
+    &.more_facets_link
+    {
+      text-align:right;
+    }
+   }
+
+}
+
 
 //header
 
 .navbar-inner {
   background-color: #000;
   background-image: none;
+  padding-top: 0.5em;
 }
 
 .navbar .brand {
@@ -76,10 +135,10 @@ $logo_image: 'blacklight/logo.png' !default;
 //logo
 .brand-logo {
    background:transparent asset_url($logo_image,image) no-repeat top left;
-	  height:35px;
+	  height:50px;
 	  margin:0;
 	  width:120px;
-   min-height:35px;
+   min-height:50px;
    min-width:120px;
 }
 
@@ -87,7 +146,7 @@ $logo_image: 'blacklight/logo.png' !default;
 /* Results page */
 
 #top-spacer {
-  height: 95px;
+  height: 125px;
 }
 
 
@@ -106,14 +165,7 @@ $logo_image: 'blacklight/logo.png' !default;
 //start over link
 #startOverLink
 {
-    background: url("/assets/blacklight/start_over.gif") no-repeat scroll center center transparent;
-    border-bottom: medium none;
-    color: #FFFFFF;
-    line-height: 22px;
-    margin-top: -12px;
-    padding: 2px 7px 3px;
-    right: 0.66em;
-    text-decoration: none;
+   right: 0.66em;
 }
 
 
@@ -219,6 +271,100 @@ form.sort
 }
 
 
+
+
+
+//From catalog.css.scsss
+
+/* label (field names) */
+$field_name_color: #888 !default;
+
+dl.defList
+{
+	clear:both;
+	overflow:auto;
+	padding:0.5em 0;
+
+  dd
+  {
+    float:left;
+    margin:0;
+    padding:2px 0;
+    text-align:left;
+    width:450px;
+  }
+
+  dt
+  {
+    clear:both;
+    color: $field_name_color;
+    float:left;
+    margin:0;
+    padding:2px 1em 2px 0;
+    text-align:right;
+    width:20%;
+  }
+}
+
+.documentFunctions
+{
+	float:right;
+	margin-bottom:0.5em;
+	margin-left:1em;
+
+  .folder_toggle,.bookmark_toggle
+  {
+    display:inline;
+  }
+}
+
+#documents
+{
+	margin-bottom:1.5em;
+	margin-top:1.5em;
+
+
+  .documentHeader
+  {
+    padding:0;
+  }
+
+  .per_page
+  {
+    padding-right:5px;
+  }
+}
+
+
+/* separates documents, facets */
+$dotted_border_color: #CCC !default;
+
+.document
+{
+	border-bottom:1px dotted $dotted_border_color; 
+	clear:both;
+	padding:0.5em 0 0;
+}
+
+
+
+/* background color of page */
+$page_bg_color: #2E4F81 !default;
+
+.page_links
+{
+	margin-left:8em;
+	margin-right:8em;
+	text-align:center;
+
+  span.current
+  {
+    background:none repeat scroll 0 0 $page_bg_color;
+    border:1px solid $page_bg_color;
+    color:#FFF;
+    font-weight:700;
+  }
+}
 
 
 // All the parameters below are the defaults assumed by blacklight. If you want

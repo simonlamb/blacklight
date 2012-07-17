@@ -3,7 +3,5 @@
   <div id="sidebar-title">
     <h4><%= t('blacklight.search.facets.title') %></h4>
   </div>
-  <ul class="nav nav-list">
-    <%= render_facet_partials %>
-  </ul>
+  <%= render_facet_partials %> 
 </div>

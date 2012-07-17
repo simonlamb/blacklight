@@ -106,29 +106,24 @@
   </div>
   <div id="main-container" class="container">
     <div class="inner-container">
-    <!-- Top bar -->
-     <%= topbar_items.join('').html_safe %>
-    <!-- /Top bar -->
-
-
-    <!-- sidebar -->
-     <div class="container">
-        <div class="row-fluid">
-          <div class="span3 hidden-phone">
-            <div class="sidebar-nav well " id="sidebar-nav">
-              <!-- <div id="sidebar-title">
-                <h4>Refine Search</h4>
-              </div>
-              -->
-              <%= sidebar_items.join('').html_safe %>
-             
-            </div><!--/.well -->
-          </div><!--/span-->
-         <div class="span9">
-             <%= render :partial=>'/flash_msg' %>
-             <%= yield %>	
-         </div>
+      <!-- Top bar -->
+      <div id="search-found" class="row-fluid hidden-phone">
+        <%= topbar_items.join('').html_safe %>
       </div>
+      <!-- /Top bar -->
+      <!-- sidebar -->
+      <div class="container">
+            <div class="row-fluid">
+                <div class="span3 hidden-phone">
+                  <div class="sidebar-nav well " id="sidebar-nav">
+                    <%= sidebar_items.join('').html_safe %>
+                  </div><!--/.well -->
+                </div><!--/span -->
+               <div class="span9">
+                   <%= render :partial=>'/flash_msg' %>
+                   <%= yield %>
+               </div>
+          </div>
     </div>
   </div>
 </div>
