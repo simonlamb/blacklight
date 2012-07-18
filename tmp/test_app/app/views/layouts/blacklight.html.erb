@@ -30,7 +30,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
   </head>
-
+ <body>
   <% onload_text = "$('input#q').focus();" if params[:q].to_s.empty? and params[:f].to_s.empty? and params[:id].nil? %>
 
      <div class="navbar navbar-fixed-top" id="navbar-fixed-results-top">
@@ -50,52 +50,7 @@
           </div><!--/.nav-collapse -->
       </div>
       </div>
-
      <%= render :partial=>'search_form' %>
-
-
-<!-- search bar fixed 
-    <div id="search-bar" class="navbar-inner visible-desktop">
-      <div class="container">
-     <form class="form-inline search-form">
-                 <input type="text" class="input-xlarge search-query">
-                 <select>
-                    <option value="all">All fields</option>
-                    <option value="title">Title</option>
-                    <option value="author">Author</option>
-                  </select>
-                 <button type="submit" class="btn">Search</button>
-               </form>
-      </div>
-    </div>
-<!-- /search bar fixed -->
-
-<!-- search bar fixed (tablet) 
-    <div id="tablet-search-bar" class="navbar-inner visible-tablet">
-      <div class="container">
-        <div class="row">
-<div class="span11 offset1">
-          <form class="form-inline search-form">
-             <input type="text" style="margin-top:0.5em;margin-bottom:0.4em;margin-left:0.5em;" class="pull-left input-xxlarge search-query">
-             <div class="btn-group pull-left">
-              <button class="btn"><i class="icon-search icon"></i></button>
-              <button class="btn dropdown-toggle" data-toggle="dropdown">
-              <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#">All</a></li>
-                <li><a href="#">Title</a></li>
-                <li><a href="#">Author</a></li>
-                <li><a href="#">ISBN</a></li>
-              </ul>
-          </div>
-           </form>
-</div>
-        </div>
-      </div>
--->
-    </div>
-
 </div>
 
 
@@ -126,6 +81,7 @@
           </div>
     </div>
   </div>
+</div>
 </div>
 
  <footer>

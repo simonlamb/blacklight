@@ -2,7 +2,7 @@
 @import "bootstrap-responsive";
 
 @import 'blacklight/blacklight_defaults';
-@import "blacklight/facets";
+
 
 $logo_image: 'blacklight/logo.png' !default;
 
@@ -10,14 +10,24 @@ $logo_image: 'blacklight/logo.png' !default;
 //bootstrap var
 $navbarHeight: 50px; 
 
+.navbar-fixed-top, .navbar-fixed-bottom {
+  z-index:1000;
+}
+
+body {
+  background-color:#161616;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#background-container {
+  width: 100%;
+}
+
 
 
 #facets
-{
-	font-size:100%;
-	padding:1em 0 0 1em;
-
-
+{	
   h2
   {
     font-size:14px!important;
@@ -39,7 +49,6 @@ $navbarHeight: 50px;
 
     li
     {
-      padding-left:1.2em;
       list-style:none;
       margin:.3em 0;
 
@@ -103,7 +112,13 @@ $navbarHeight: 50px;
 }
 
 
+#main-container {
+  min-height:600px;
+}
 
+#home-text-container {
+  padding-top:1em;
+}
 
 
 //search form
@@ -290,8 +305,7 @@ dl.defList
     float:left;
     margin:0;
     padding:2px 0;
-    text-align:left;
-    width:450px;
+    text-align:left; 
   }
 
   dt
@@ -365,6 +379,106 @@ $page_bg_color: #2E4F81 !default;
     font-weight:700;
   }
 }
+
+
+
+
+//Label toggle folder
+//
+//
+label.toggle_bookmark,label.toggle_folder
+{
+	color:inherit;
+	display:inline-block;
+	font-weight:inherit;
+	min-width:8.5em;
+	text-align:left;
+}
+
+label.toggle_folder
+{
+	min-width:6em;
+}
+
+
+//Show page css
+
+#tools-nav {
+	 background-color: #EFEFEF;
+   border: 0px solid rgba(0, 0, 0, 0.05);
+   border-radius: 0 0 0 0;
+   box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+   padding: 0.5em;
+  
+  .nav {
+    margin-top:0px;
+    margin-bottom:0px;
+  }
+
+  .nav-pills {
+    li {
+        a {
+           border-radius: 0 0 0 0;
+           margin-right: -1px;
+        }
+    }
+  }
+}
+
+
+.pageEntriesInfo
+{
+	padding:0 0.66em 0.66em 0;
+	position:relative;
+}
+
+
+#previousNextDocument {
+   .next {
+    border: 1px solid #DDDDDD;
+   }
+   .previous {
+    margin-right: -1px;
+   }
+}
+
+
+#librarian_view
+{
+	left:-17%;
+	text-align:left;
+	top:10%;
+	width:700px;
+}
+
+#marc_view
+{
+	padding:5px;
+	text-align:left;
+
+  .field
+  {
+    border-bottom: $marc_item_separator;
+    clear:both;
+  }
+
+  .ind1, .ind2
+  {
+    display:inline;
+    padding:0 5px;
+  }
+
+  .subfields
+  {
+    padding-left:5em;
+  }
+
+  .tag_ind
+  {
+    float:left;
+  }
+}
+
 
 
 // All the parameters below are the defaults assumed by blacklight. If you want
