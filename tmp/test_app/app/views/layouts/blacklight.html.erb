@@ -50,7 +50,7 @@
           </div><!--/.nav-collapse -->
       </div>
       </div>
-     <%= render :partial=>'search_form' %>
+      <%= search_bar.join('').html_safe  %>
 </div>
 
 
@@ -60,28 +60,28 @@
     &nbsp;
   </div>
   <div id="main-container" class="container">
-    <div class="inner-container">
-      <!-- Top bar -->
-      <div id="search-found" class="row-fluid hidden-phone">
-        <%= topbar_items.join('').html_safe %>
+        <div class="inner-container">
+            <!-- Top bar -->
+            <div id="search-found" class="row-fluid hidden-phone">
+              <%= topbar_items.join('').html_safe %>
+            </div>
+            <!-- /Top bar -->
+            <!-- sidebar -->
+            <div class="container">
+                  <div class="row-fluid">
+                       <div class="span3 hidden-phone">
+                            <div class="sidebar-nav well " id="sidebar-nav">
+                              <%= sidebar_items.join('').html_safe %>
+                            </div><!--/well -->
+                       </div><!--/span -->
+                       <div class="span9">
+                           <%= render :partial=>'/flash_msg' %>
+                           <%= yield %>
+                       </div>
+                  </div>
+            </div>
       </div>
-      <!-- /Top bar -->
-      <!-- sidebar -->
-      <div class="container">
-            <div class="row-fluid">
-               <div class="span3 hidden-phone">
-                  <div class="sidebar-nav well " id="sidebar-nav">
-                    <%= sidebar_items.join('').html_safe %>
-                  </div><!--/well -->
-               </div><!--/span -->
-               <div class="span9">
-                   <%= render :partial=>'/flash_msg' %>
-                   <%= yield %>
-               </div>
-          </div>
-    </div>
-  </div>
-</div>
+  </div>  
 </div>
 
  <footer>
@@ -118,7 +118,7 @@
                 </ul>
 </div>
               </div>
-              <div class="span3">
+              <div class="span3 hidden-phone">
 <div id="footer-column">
                <h4>Section</h4>
                <ul>

@@ -6,7 +6,7 @@
   # item view. While "document tools" contains external export type
   # functions by default only on detail.
 -%>
-  <div id="tools-nav" class="well">
+  <div id="tools-nav" class="well visible-desktop">
     <ul class="nav nav-pills">
       <% if (@document.respond_to?(:export_as_mla_citation_txt) || @document.respond_to?(:export_as_apa_citation_txt)) %>
         <li class="cite">

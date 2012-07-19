@@ -1,6 +1,6 @@
 <div id="search-bar" class="navbar-inner visible-desktop">
   <div class="container">
-  <%= form_tag url_for(:action=>'index'), :method => :get, :class => 'form-inline search-form' do %>
+  <%= form_tag url_for(:controller=>'catalog', :action=>'index'), :method => :get, :class => 'form-inline search-form' do %>
    <!-- <h2 class="search"><%= label_tag(:q, t('blacklight.search.form.q')) %></h2> -->
     <%= text_field_tag :q, params[:q], :class => "q input-xlarge search-query" %>
     <% unless search_fields.empty? %>
@@ -13,11 +13,12 @@
   <% end %>
   </div>
 </div>
-<div id="search-bar" class="navbar-inner hidden-desktop">
+
+<div id="moblet-search-bar" class="navbar-inner hidden-desktop">
   <div class="container">
-  <%= form_tag url_for(:action=>'index'), :method => :get, :class => 'form-inline search-form' do %>
+  <%= form_tag url_for(@controller=>'catalog', :action=>'index'), :method => :get, :class => 'form-inline search-form' do %>
    <!-- <h2 class="search"><%= label_tag(:q, t('blacklight.search.form.q')) %></h2> -->
-    <%= text_field_tag :q, params[:q], :class => "q input-xlarge search-query" %>
+    <%= text_field_tag :q, params[:q], :class => "q input-medium search-query" %>
     <% unless search_fields.empty? %>
       <%= label_tag(:search_field, " #{t('blacklight.search.form.search_field.label')} ") %>
       <%= select_tag(:search_field, options_for_select(search_fields, h(params[:search_field])), :title => t('blacklight.search.form.search_field.title'), :class=>"search_field") %>
@@ -29,44 +30,3 @@
   </div>
 </div>
 
-
-<!-- search bar fixed (tablet) 
-    <div id="tablet-search-bar" class="navbar-inner visible-tablet">
-      <div class="container">
-        <div class="row">
-<div class="span11 offset1">
-          <form class="form-inline search-form">
-             <input type="text" style="margin-top:0.5em;margin-bottom:0.4em;margin-left:0.5em;" class="pull-left input-xxlarge search-query">
-             <div class="btn-group pull-left">
-              <button class="btn"><i class="icon-search icon"></i></button>
-              <button class="btn dropdown-toggle" data-toggle="dropdown">
-              <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#">All</a></li>
-                <li><a href="#">Title</a></li>
-                <li><a href="#">Author</a></li>
-                <li><a href="#">ISBN</a></li>
-              </ul>
-          </div>
-           </form>
-</div>
-        </div>
-      </div>
--->
-
-<!--
- <div id="search-bar" class="navbar-inner visible-desktop">
-      <div class="container">
-     <form class="form-inline search-form">
-                 <input type="text" class="input-xlarge search-query">
-                 <select>
-                    <option value="all">All fields</option>
-                    <option value="title">Title</option>
-                    <option value="author">Author</option>
-                  </select>
-                 <button type="submit" class="btn">Search</button>
-               </form>
-      </div>
-    </div>
--->

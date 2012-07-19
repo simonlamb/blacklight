@@ -21,9 +21,11 @@
 <% end %>
 
 
-<li>
-   <%= link_to t('blacklight.header_links.selected_items')  +  " (#{session[:folder_document_ids] ? session[:folder_document_ids].length : 0})" , folder_index_path %>
-
+<li id="selected-items">
+  <%= link_to t('blacklight.header_links.selected_items'), folder_index_path, {:id=>'desktop-folder-link', :class => 'visible-desktop'} %>
+  <%= link_to t('blacklight.header_links.selected_items'), folder_index_path, :class => 'hidden-desktop' %>
+  <div id="folder" class="visible-desktop">(<span id="folder_number"><%= "#{session[:folder_document_ids] ? session[:folder_document_ids].length : 0}" %></span>)</div>
+</li>
 <li>    
   <%= link_to t('blacklight.header_links.search_history'), search_history_path %>
 </li>

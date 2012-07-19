@@ -8,11 +8,15 @@ $logo_image: 'blacklight/logo.png' !default;
 
 
 //bootstrap var
-$navbarHeight: 50px; 
+$navbarHeight: 50px;
+
+$h1FontSize: 20px; 
 
 .navbar-fixed-top, .navbar-fixed-bottom {
   z-index:1000;
 }
+
+
 
 body {
   background-color:#161616;
@@ -20,24 +24,37 @@ body {
   padding-right: 0;
 }
 
+h1 {
+  font-size:$h1FontSize;
+}
+
 #background-container {
   width: 100%;
 }
 
+#main-container {
+  padding: 0 5px 0 5px;
+}
 
+
+
+
+.navbar-fixed-bottom {
+  margin-right:0px;
+}
 
 #facets
 {	
   h2
   {
-    font-size:14px!important;
+    font-size:15px!important;
     color:#555;
   }
 
   h3
   {
     padding: 3px 15px;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: bold;
     line-height: 18px;
     color: #999999;
@@ -85,7 +102,7 @@ body {
 
 #navbar-fixed-results-top {
   margin: 0;
-  opacity: 0.8;
+  opacity: 1;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -111,38 +128,53 @@ body {
     margin-top: 0;
 }
 
-
-#main-container {
-  min-height:600px;
-}
-
 #home-text-container {
   padding-top:1em;
 }
 
 
+//Links in nav bar
+//selected-items this is css to deal with the selected number span within the links menu
+#selected-items {
+  #desktop-folder-link { 
+      float:left;
+      padding-right:5px;
+  }
+  #folder  {
+    float: right;
+    padding: 9px 10px 0 0;
+ }
+}
+ 
+
+
+
+
 //search form
 #search-bar {
-  background-color: rgba(255, 255, 255, 0.9);
+  background: url("/assets/blacklight/border-eebab062f99ac5bc2bcab5c23a7475e3.png") repeat-x scroll left top #FFFFFF;
+  margin: 0 auto;
+  max-width: 100%;
   opacity: 1 !important;
 }
+
 
 #search-bar.navbar-inner {
   box-shadow: none;
 }
 
-#tablet-search-bar {
-  background-color: #fff;
-  padding-bottom: 1em;
-}
-
-#tablet-search-input {
-  padding-bottom: 1em;
-}
-
 .search-form {
   margin: 0;
   padding: 0.5em 0 0.5em 0;
+}
+
+#moblet-search-bar {
+  background: url("/assets/blacklight/border-eebab062f99ac5bc2bcab5c23a7475e3.png") repeat-x scroll left top #FFFFFF;
+  padding-bottom: 1em;
+}
+
+#moblet-search-inpur {
+  padding-bottom: 1em;
 }
 
 
@@ -163,7 +195,6 @@ body {
 #top-spacer {
   height: 125px;
 }
-
 
 //Facets
 .facet_select {
@@ -334,13 +365,13 @@ dl.defList
 
 #documents
 {
-	margin-bottom:1.5em;
-	margin-top:1.5em;
+	margin-bottom:1em;
+	margin-top:1em;
 
 
   .documentHeader
   {
-    padding:0;
+    padding: 5px 0 0;
   }
 
   .per_page
@@ -357,7 +388,6 @@ $dotted_border_color: #CCC !default;
 {
 	border-bottom:1px dotted $dotted_border_color; 
 	clear:both;
-	padding:0.5em 0 0;
 }
 
 
