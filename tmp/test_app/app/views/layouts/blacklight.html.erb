@@ -69,12 +69,12 @@
             <!-- sidebar -->
             <div class="container">
                   <div class="row-fluid">
-                       <div class="span3 hidden-phone">
+                       <div id="sidebar" class="span3 hidden-phone">
                             <div class="sidebar-nav well " id="sidebar-nav">
                               <%= sidebar_items.join('').html_safe %>
                             </div><!--/well -->
                        </div><!--/span -->
-                       <div class="span9">
+                       <div id="content" class="span9">
                            <%= render :partial=>'/flash_msg' %>
                            <%= yield %>
                        </div>
@@ -90,9 +90,7 @@
   <div class="container">
   <h4 id="footer-title-top" class="hidden-phone">
     <a href="#">Catalog</a></h4>
-    <div class="brand-logo pull-right visible-phone">
-<!-- <img src="http://www2.hull.ac.uk/lli/images/logo.gif" alt="Logo" /> -->
-          </div>
+    <div class="brand-logo pull-right visible-phone"></div>
 </div>
 
 </div>

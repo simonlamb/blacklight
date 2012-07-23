@@ -51,7 +51,6 @@
       </div>
       </div>
       <%= search_bar.join('').html_safe  %>
-     <%= render :partial=>'search_form' %>
 </div>
 
 
