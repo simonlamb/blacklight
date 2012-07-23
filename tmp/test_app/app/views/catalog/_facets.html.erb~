@@ -1,7 +1,0 @@
-<% # main container for facets/limits menu -%>
-<div id="facets" class="facets">
-  <div id="sidebar-title">
-    <h4><%= t('blacklight.search.facets.title') %></h4>
-  </div>
-  <%= render_facet_partials %> 
-</div>
