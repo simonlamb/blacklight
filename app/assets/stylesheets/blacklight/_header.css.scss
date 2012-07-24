@@ -4,6 +4,9 @@
 	padding:0;
 }
 
+/*
+  Site title not being used in this Boostrap instance of BL
+*/
 h1.site_title
 {
 	background:transparent asset_url($logo_image,image) no-repeat top left;
@@ -33,4 +36,93 @@ h2.search
 	display:inline;
 	margin:0;
 }
+
+
+
+/*
+ The main logo image for the Blacklight instance
+*/
+.brand-logo {
+   background:transparent asset_url($logo_image,image) no-repeat top left;
+	  height:50px;
+	  margin:0;
+	  width:120px;
+   min-height:50px;
+   min-width:120px;
+}
+
+
+/*
+  Header bar at top (Bootstrap nav-bar)
+*/
+
+/* This ensures that any tool pop-up goes infront of the header */
+.navbar-fixed-top {
+  z-index:1000;
+}
+
+
+#header-navbar-fixed-top {
+  margin: 0;
+  opacity: 1;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+  .navbar-inner {
+    background-color: #000;
+    background-image: none;
+    padding-top: 0.5em;
+  }
+
+  .navbar .brand {
+      color: #fff;
+  }
+
+  /*
+    Search form is in the header...
+  */
+  #search-bar {
+    background: url("/assets/blacklight/border-eebab062f99ac5bc2bcab5c23a7475e3.png") repeat-x scroll left top #FFFFFF;
+    margin: 0 auto;
+    max-width: 100%;
+    opacity: 1 !important;
+
+    .navbar-inner {
+        box-shadow: none;
+    }
+
+    .search-form {
+        margin: 0;
+        padding: 0.5em 0 0.5em 0;
+    }
+  }
+  #moblet-search-bar {
+    background: url("/assets/blacklight/border-eebab062f99ac5bc2bcab5c23a7475e3.png") repeat-x scroll left top #FFFFFF;
+    padding-bottom: 1em;
+  }
+
+  #moblet-search-input {
+    padding-bottom: 1em;
+  }
+ 
+}
+
+
+/*
+  Selected items needs special css to deal with number of selected items
+*/
+#selected-items {
+  #desktop-folder-link { 
+      float:left;
+      padding-right:5px;
+  }
+  #folder  {
+    float: right;
+    padding: 9px 10px 0 0;
+ }
+}
+ 
+
+
+
+
 

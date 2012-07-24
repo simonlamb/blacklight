@@ -28,13 +28,12 @@
 
 #documents
 {
-	margin-bottom:1.5em;
-	margin-top:1.5em;
-
+	margin-bottom:1em;
+	margin-top:1em;
 
   .documentHeader
   {
-    padding:0;
+     padding: 5px 0 0;
   }
 
   .per_page
@@ -79,18 +78,15 @@
   }
 }
 
-#previousNextDocument
-{
-	background-color:$search_ui_bg_color;
-	border:1px solid $search_ui_border_color;
-	margin-bottom:1.5em;
-	overflow:auto;
-	padding:0.66em;
 
-  .next
-  {
-    float:right;
-  }
+#previousNextDocument {
+   .next {
+    border: 1px solid #DDDDDD;
+   }
+   .previous {
+    margin-right: -1px;
+    border: 1px solid #DDDDDD;
+   }
 }
 
 #search
@@ -126,34 +122,24 @@
 }
 
 
-#sortAndPerPage
-{
-	background-color:$search_ui_bg_color;
-	border-color:$search_ui_border_color;
-	border-style:solid;
-	border-width:0 1px 1px 1px;
-	padding:0.66em;
+#sortAndPerPage {
+  background-color: $well_bg_color;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 0 0 0 0;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+  padding: 0.5em 0.5em 0;
 
-
-  label
-  {
-    font-weight:400;
+  select {
+    width: 150px;
+  }
+  label {
+    margin: 0;
   }
 }
 
 #startOverLink
 {
-	background:asset_url('blacklight/start_over.gif', image) no-repeat center center;
-	border-bottom:none;
-	color:#fff;
-	display:block;
-	line-height:22px;
-	margin-top:-12px;
-	padding:0 7px 3px 12px;
-	position:absolute;
-	right:0.66em;
-	text-decoration:none;
-	top:50%;
+   right: 0.66em;
 }
 
 .appliedFilter
@@ -205,7 +191,6 @@
 {
 	border-bottom:1px dotted $dotted_border_color; 
 	clear:both;
-	padding:0.5em 0 0;
 }
 
 .documentFunctions
@@ -220,22 +205,22 @@
   }
 }
 
-
 .filterValue
 {
 	padding-right:37px;
 }
 
+
 .pageEntriesInfo
 {
-	background-color:$search_ui_bg_color;
+  background-color:$search_ui_bg_color;
 	border-color:$search_ui_border_color;
-	border-style:solid;
+  border-style:solid;
 	border-width:1px 1px 0;
-	padding:0.66em;
+	padding:0 0.66em 0.66em 0;
 	position:relative;
-	text-align:center;
 }
+
 
 .page_links
 {
@@ -251,6 +236,12 @@
     font-weight:700;
   }
 }
+
+/*
+Pagination class is using the default Bootstrap design
+*/
+
+/*
 .pagination
 {
 	background-color:$search_ui_bg_color;
@@ -287,13 +278,16 @@
     border:1px solid #003;
     text-decoration:none;
   }
-
+ 
   span.disabled
   {
     color:#999;
   }
 
 }
+*/
+
+
 .show #appliedParams
 {
 	border-top:1px solid $search_ui_border_color;
@@ -366,4 +360,29 @@ span.page a,span.page.current
 	margin-right:0.2em;
 	padding:0.2em 0.5em;
 	text-decoration:none;
+}
+
+
+/* Tools bar on document view */
+//Show page css
+#tools-nav {
+  background-color: $well_bg_color;
+  border: 0px solid rgba(0, 0, 0, 0.05);
+  border-radius: 0 0 0 0;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+  padding: 0.5em;
+  
+  .nav {
+    margin-top:0px;
+    margin-bottom:0px;
+  }
+
+  .nav-pills {
+    li {
+        a {
+           border-radius: 0 0 0 0;
+           margin-right: -1px;
+        }
+    }
+  }
 }

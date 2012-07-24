@@ -11,8 +11,9 @@
 
   h3
   {
-    color:#555;
+    color:#999999;
     cursor:pointer;
+    line-height: 18px;
     font-weight:400;
     margin-bottom:0;
     text-align:justify;
@@ -26,6 +27,8 @@
     a.remove
     {
       color:#666;
+      margin-left: 0px;
+      padding: 3px 5px;
     }
 
     a:hover
@@ -47,7 +50,6 @@
   ul,h3 +div
   {
     border-bottom:1px dotted $dotted_border_color;
-    margin:0;
     padding-bottom:1em;
   }
 }

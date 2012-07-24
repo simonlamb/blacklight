@@ -6,8 +6,8 @@
    not to use the Blacklight CSS file at all in your local app. */
 
 
-@import "compass";
-@import "compass/reset";
+//@import "compass";
+//@import "compass/reset";
 
 @import 'blacklight/blacklight_defaults';
 
@@ -15,9 +15,10 @@
 @import "blacklight/layout";
 @import "blacklight/formatting";
 @import "blacklight/header";
+@import "blacklight/footer";
 @import "blacklight/catalog";
-@import "blacklight/facets";
 @import "blacklight/folder";
+@import "blacklight/facets";
 @import "blacklight/search_history";
 @import "blacklight/print";
 

@@ -10,7 +10,6 @@ a:hover
 
 a:link,a:visited,a:active
 {
-	border-bottom:1px dotted #aaa;
 	color:#2e4f81;
 	text-decoration:none;
 }
@@ -134,31 +133,9 @@ select,input,button,textarea
 	font:1em Verdana, "Lucida Grande", "Lucida Sans Unicode", "Arial Unicode MS", Arial, sans-serif;
 }
 
-table.zebra .zebra_stripe,ul.zebra .zebra_stripe
-{
-	background-color:#F1F5FA;
-}
-
 textarea
 {
 	height:15em;
 	width:30em;
-}
-
-th
-{
-	font-weight:700;
-	text-align:center;
-}
-
-th,td
-{
-	border:1px solid #000;
-	padding:.5em;
-}
-
-ul li
-{
-	list-style:disc outside;
 }
 
