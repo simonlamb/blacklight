@@ -1,8 +1,3 @@
-@import "bootstrap";
-@import "bootstrap-responsive";
-
-
-
 // All the parameters below are the defaults assumed by blacklight. If you want
 // to change one, uncomment and change.
 
@@ -60,10 +55,7 @@
 // $marc_item_separator: 1px solid #CCC;
 
 // Currently unused, but this import handles mixins common to blacklight
-
 @import 'blacklight/mixins';
-
-
 
 // And then this imports the base blacklight stylesheet.
 @import 'blacklight/blacklight_base';

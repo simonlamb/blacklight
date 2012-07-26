@@ -14,6 +14,10 @@
 //= require blacklight/select_submit
 //= require blacklight/zebra_stripe
 
+//Bootstrap JS for providing collapsable tablet/mobile menu
+//= require bootstrap-transition
+//= require bootstrap-collapse
+
 /* Blacklight has a Javascript setup meant to support local disabling, 
   modification, and use of Blacklight behaviors. 
   

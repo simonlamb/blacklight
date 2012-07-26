@@ -83,7 +83,7 @@ module Blacklight::FacetsHelperBehavior
     name = facet_configuration_for_field(display_facet.name).try(:partial)
     name ||= "facet_limit"
   end
-
+ 
   #
   # facet param helpers ->
   #
@@ -94,14 +94,16 @@ module Blacklight::FacetsHelperBehavior
   # first arg item is a facet value item from rsolr-ext.
   # options consist of:
   # :suppress_link => true # do not make it a link, used for an already selected value for instance
-  def render_facet_value(facet_solr_field, item, options ={})    
-    (link_to_unless(options[:suppress_link], item.value, add_facet_params_and_redirect(facet_solr_field, item.value), :class=>"facet_select label") + " " + render_facet_count(item.hits)).html_safe
+  def render_facet_value(facet_solr_field, item, options ={})
+    #Updated to render for Bootstrap Blacklight    
+    (link_to_unless(options[:suppress_link], item.value, add_facet_params_and_redirect(facet_solr_field, item.value), :class=>"facet_select") + " " + render_facet_count(item.hits)).html_safe
   end
 
   # Standard display of a SELECTED facet value, no link, special span
   # with class, and 'remove' button.
   def render_selected_facet_value(facet_solr_field, item)
-    content_tag(:span, render_facet_value(facet_solr_field, item, :suppress_link => true), :class => "selected label") +
+    #Updated class for Bootstrap Blacklight 
+    content_tag(:span, render_facet_value(facet_solr_field, item, :suppress_link => true), :class => "selected") +
       link_to(t('blacklight.search.facets.selected.remove'), remove_facet_params(facet_solr_field, item.value, params), :class=>"remove")
   end
 

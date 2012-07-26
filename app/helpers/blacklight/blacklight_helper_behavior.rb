@@ -63,10 +63,20 @@ module Blacklight::BlacklightHelperBehavior
     @sidebar_items ||= []
   end
 
+  # collection of items to be rendered in the @topbar
+  def topbar_items
+    @topbar_items ||= []
+  end
+
+  # collection of items to be rendered in the @searchbar 
+  def search_bar
+    @search_bar ||= []
+  end
+
   def extra_body_classes
     @extra_body_classes ||= ['blacklight-' + controller.controller_name, 'blacklight-' + [controller.controller_name, controller.action_name].join('-')]
   end
-  
+ 
   
   def render_document_list_partial options={}
     render :partial=>'catalog/document_list'

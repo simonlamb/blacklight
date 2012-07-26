@@ -81,7 +81,7 @@ h2.search
     Search form is in the header...
   */
   #search-bar {
-    background: url("/assets/blacklight/border-eebab062f99ac5bc2bcab5c23a7475e3.png") repeat-x scroll left top #FFFFFF;
+    background:asset_url($header_background_border,image) repeat-x scroll left top #FFFFFF;
     margin: 0 auto;
     max-width: 100%;
     opacity: 1 !important;
@@ -96,14 +96,13 @@ h2.search
     }
   }
   #moblet-search-bar {
-    background: url("/assets/blacklight/border-eebab062f99ac5bc2bcab5c23a7475e3.png") repeat-x scroll left top #FFFFFF;
-    padding-bottom: 1em;
+    padding-top: 1em;
+    background:asset_url($header_background_border,image) repeat-x scroll left top #FFFFFF;
+    
+    form {
+      margin:0;
+    }
   }
-
-  #moblet-search-input {
-    padding-bottom: 1em;
-  }
- 
 }
 
 

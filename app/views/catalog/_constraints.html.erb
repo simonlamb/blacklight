@@ -1,7 +1,11 @@
 <div id="appliedParams">
-
-	<h3 class="label"><%= t('blacklight.search.filters.title') %></h3>
-  
-  <%= render_constraints(localized_params) %>  
-		
+  <% #Contraints are adding as a Bootstrap row, with 3/9 span split -%>
+  <div id="search-found" class="row-fluid hidden-phone">
+    <div class="span3">
+	    <h4><%= t('blacklight.search.filters.title') %></h4>
+    </div>
+    <div class="span9">
+      <%= render_constraints(localized_params) %>  
+		</div>
+  </div>
 </div>

@@ -17,6 +17,5 @@
 //= require jquery-ui
 //= require blacklight/blacklight
 //= require_tree .
-//= require bootstrap-transition
-//= require bootstrap-collapse
+
 
