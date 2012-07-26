@@ -65,16 +65,13 @@
             <!-- /Top bar -->
             <!-- sidebar -->
             <div class="container">
-                  <div class="row-fluid">
-                       <div id="sidebar" class="span3 hidden-phone">
-                            <div class="sidebar-nav well " id="sidebar-nav">
-                              <%= sidebar_items.join('').html_safe %>
-                            </div><!--/well -->
-                       </div><!--/span -->
-                       <div id="content" class="span9">
-                           <%= render :partial=>'/flash_msg' %>
-                           <%= yield %>
-                       </div>
+                  <div class="row">
+                      <div class="span10">
+                        <%= render :partial=>'/flash_msg' %>
+                      </div>    
+                  </div>
+                  <div class="row">                  
+                       <%= yield %>                     
                   </div>
             </div>
       </div>
@@ -100,10 +97,10 @@
                   <h4>Section</h4>
                   <ul>
                    <li><a href="#">Link</a></li>
-                   <li>
+                   <ul>
                        <li><a href="#">Sub-link</a></li>
                        <li><a href="#">Sub-link</a></liv>
-                  </li>
+                  </ul>
                    <li><a href="#">Link</a></li>
                    <li><a href="#">Link</a></li>
                    <li><a href="#">Link</a></li>

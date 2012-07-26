@@ -31,7 +31,7 @@ describe "catalog/_facets" do
 
     it "should list values" do
       render
-      rendered.should have_selector('a.label')
+      rendered.should have_selector('a.facet_select')
       rendered.should have_selector('.count')
     end
 

@@ -1,3 +1,11 @@
+<div id="sidebar" class="span3">
+  <div class="sidebar-nav well" id="sidebar-nav">
+   <%= render_document_sidebar_partial  %>
+  </div><!--/well -->
+</div><!--/span -->
+
+<div id="content" class="span9">
+   
 <% @page_title = t('blacklight.search.show.title', :document_title => document_show_html_title, :application_name => application_name) %>
 <% extra_head_content << render_link_rel_alternates %>
 <% sidebar_items << render_document_sidebar_partial %>
@@ -19,15 +27,24 @@
 <div id="document" class="<%= render_document_class %>">
   <div id="doc_<%= @document.id.to_s.parameterize %>">
   
-    <div class="tools"><%= render :partial => 'show_tools' %></div>
+    <!-- Desktop tools go above the document -->
+    <div class="tools visible-desktop">     
+        <%= render :partial => 'show_tools' %>
+    </div>
      
     <% # bookmark/folder functions -%>
     <%= render_show_doc_actions @document %> 
     <%= render_document_heading.html_safe %>
-  
+
     <div class="document">
       <%= render_document_partial @document, :show %>
     </div>
+
+     <!-- Tablet and mobile tools go below the document -->
+    <div class="tools hidden-desktop">
+      <%= render :partial => 'show_tools' %>
+    </div>
+
   </div>
 </div>
 <%= render 'previous_next_doc' %>
@@ -40,3 +57,5 @@
     -->
     <span class="Z3988" title="<%= @document.export_as_openurl_ctx_kev(document_partial_name(@document)) %>"></span>
   <% end %>
+
+</div>

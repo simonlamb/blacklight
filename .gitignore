@@ -17,3 +17,5 @@ Gemfile.lock
 .rvmrc
 pkg/*
 *.swp
+tmp/*
+tmp/test_app

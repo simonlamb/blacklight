@@ -1,4 +1,7 @@
-ul.folderTools
+//ul.desktop-folderTools
+
+
+ul#desktop-folderTools 
 {
   @include border-radius(0 0 4px 4px);
 	background-color: $well_bg_color;
@@ -22,6 +25,38 @@ ul.folderTools
     padding-top: 6px;
   }
 
+ /* Adjusts the bookmark btn to be 'inline' with other functions on the folder list view  */
+ li.bookmark a {
+    margin-top: 2px;    
+    padding-bottom: 6px;
+    padding-top: 6px;
+  }
+
+  li.refworks form input.submit
+  {
+    display:none;
+  }
+}
+
+ul#moblet-folderTools
+{
+  @include border-radius(0 0 4px 4px);
+	background-color: $well_bg_color;
+	border-color: $well_bg_color;
+	margin:0;
+
+  li form
+  {
+    display:inline;
+  }
+
+  /* Adjusts the refworks btn to be 'inline' with other functions on the folder list view  */
+  li.refworks a {
+    display:block;
+  }
+  li.bookmark a {
+    display:block;
+  }
 
   li.refworks form input.submit
   {

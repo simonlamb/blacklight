@@ -12,9 +12,18 @@
   <div class="pageEntriesInfo"></div>
   <%= render "catalog/sort_and_per_page" %>
   <%= render "catalog/results_pagination" %>
-  
-  <%= render 'tools' %>  
+
+  <!-- We render the tools at the top desktop only -->
+  <div id="tools-nav" class="well visible-desktop">
+    <%= render 'tools' %>
+  </div>  
 <% end %>
+
+
+
+
+
+  
 
 <div id="documents">  
   <% @documents.each_with_index do |document, i| %>
@@ -46,3 +55,12 @@
   
   <% end %>
 </div>
+
+<% unless @documents.empty? %>
+  <!-- We render the tools at the top desktop only -->
+  <div id="tools-nav" class="well hidden-desktop">
+    <%= render 'tools' %>
+  </div>  
+<% end %>
+
+
