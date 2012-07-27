@@ -9,6 +9,11 @@
   margin-top: 0;
 }
 
+#footer-container-top {
+  background-color:$navbar_background_color;
+  background-image:none;
+
+}
 
 #footer-container {
   background-image: -moz-linear-gradient(center top , #2A2A2A, #161616);
